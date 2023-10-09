@@ -1,4 +1,5 @@
 export default {
   header: "Trails Page",
-  view: "Trails"
+  view: "Trails",
+  weather: {}
 };
