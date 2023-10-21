@@ -3,6 +3,7 @@ import * as store from "./store";
 import Navigo from "navigo";
 import { capitalize } from "lodash";
 import axios from "axios";
+import { Layer } from "leaflet";
 
 const router = new Navigo("/");
 
@@ -13,15 +14,25 @@ function render(state = store.Home) {
   ${Main(state)}
   ${Footer()}
   `;
-  afterRender();
+  afterRender(state);
   router.updatePageLinks();
 }
 
-function afterRender() {
+function afterRender(state) {
   document.querySelector(".fa-bars").addEventListener("click", () => {
     document.querySelector("nav > ul").classList.toggle("hidden--mobile");
   });
+  //L.mapquest.key = process.env.MAPQUEST_API_KEY;
+  if (state.view === "Home") {
+    L.mapquest.key = process.env.MAPQUEST_API_KEY;
+    let map = L.mapquest.map("map", {
+      center: [38.134557, -100.634766],
+      layers: L.mapquest.tileLayer("map"),
+      zoom: 5
+    });
+  }
 }
+
 router.hooks({
   before: (done, params) => {
     const view =
@@ -59,7 +70,7 @@ router.hooks({
           .then(response => {
             const kelvinToFahrenheit = kelvinTemp =>
               Math.round((kelvinTemp - 273.15) * (9 / 5) + 32);
-            store.Home.weather = {
+            store.Trails.weather = {
               city: response.data.name,
               temp: kelvinToFahrenheit(response.data.main.temp),
               feelsLike: kelvinToFahrenheit(response.data.main.feels_like),

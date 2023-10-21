@@ -1,14 +1,70 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+
 header{
   font-size: 30px;
   text-align: center;
+  color: #fff;
+}
+.row{
+  display: flex;
+  height: 88%;
+  align-items: center;
+}
+.col{
+  flex-basis: 50%;
+}
+button{
+  width: 180px;
+  color: #000;
+  font-size: 18px;
+  padding: 12px 0;
+  background: #fff;
+  border: 0;
+  border-radius: 20px;
+  outline: none;
+  margin-top: 30px;
 }
 
+.card{
+  width: 200px;
+  height: 230px;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 10px 15px;
+  background-image:url(assets/img/IMG_7537.jpg);
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.5s;
+
+}
+
+.card:hover{
+  transform: translateY(-10px);
+
+
+}
 h2{
   font-size: 40px;
-}
+  color: #fff;
+  }
+
+
+
 html{
-  background-image: url(assets/img/dog\ trail.jpeg);
+
+
+  background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(assets/img/dog\ trail.jpeg);
+  background-position: center;
   background-size: cover;
+
+
 }
 
 #jumbotron {
@@ -18,7 +74,10 @@ html{
   justify-content: center;
   align-items: center;
   height: 90vh;
+  color: #fff;
 }
+
+
 #root {
 
 
@@ -135,4 +194,8 @@ footer {
     height: auto;
     margin-right: 1rem;
   }
+}
+#map {
+  height: 600px;
+  width: 100%;
 }
