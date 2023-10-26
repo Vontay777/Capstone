@@ -25,6 +25,6 @@ export default state => html`<section id = "jumbotron">
     <p> trails nearby </p>
   </div>
 </div>
-<div id="map"></div>
+<!-- <div id="map"></div> -->
 
 </section `;
