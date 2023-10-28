@@ -35,7 +35,7 @@ function afterRender(state) {
       draggable: false
     })
       .bindPopup(
-        "<img src = https://www.stlouis-mo.gov/government/departments/parks/parks/images/115-13417135525139-large.jpg max-width: 20px/>  " +
+        "<img src = https://www.stlouis-mo.gov/government/departments/parks/parks/images/115-13417135525139-large.jpg width=300px />  " +
           "Tower Grove Parks"
       )
       .addTo(map);
