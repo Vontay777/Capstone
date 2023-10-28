@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import paths from "./routers/paths.js";
 
 dotenv.config();
 
@@ -86,6 +87,8 @@ app.get("/weather/:city", (request, response) => {
     })
   );
 });
+
+app.use("/paths", paths);
 
 // not sure ^^^ //
 

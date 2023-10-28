@@ -1,5 +1,5 @@
 export default {
-  header: "Trails Page",
+  header: "Parks & Trails",
   view: "Trails",
   weather: {}
 };

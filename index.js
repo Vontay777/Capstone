@@ -13,15 +13,63 @@ function render(state = store.Home) {
   ${Main(state)}
   ${Footer()}
   `;
-  afterRender();
+  afterRender(state);
   router.updatePageLinks();
 }
 
-function afterRender() {
+function afterRender(state) {
   document.querySelector(".fa-bars").addEventListener("click", () => {
     document.querySelector("nav > ul").classList.toggle("hidden--mobile");
   });
+
+  if (state.view === "Trails") {
+    L.mapquest.key = process.env.MAPQUEST_API_KEY;
+    let map = L.mapquest.map("map", {
+      center: [38.628644466090925, -90.2659900654653],
+      layers: L.mapquest.tileLayer("map"),
+      zoom: 11
+    });
+
+    L.marker([38.605211006893214, -90.25532408411401], {
+      icon: L.mapquest.icons.marker(),
+      draggable: false
+    })
+      .bindPopup(
+        "<img src = https://www.stlouis-mo.gov/government/departments/parks/parks/images/115-13417135525139-large.jpg width=300px />  " +
+          "Tower Grove Parks"
+      )
+      .addTo(map);
+
+    L.marker([38.63815030200443, -90.27283398753545], {
+      icon: L.mapquest.icons.marker(),
+      draggable: false
+    })
+      .bindPopup("Forest Park")
+      .addTo(map);
+
+    L.marker([38.56325080105689, -90.26593619380246], {
+      icon: L.mapquest.icons.marker(),
+      draggable: false
+    })
+      .bindPopup("Carondelet Park")
+      .addTo(map);
+
+    L.marker([38.61626070515646, -90.21634994214477], {
+      icon: L.mapquest.icons.marker(),
+      draggable: false
+    })
+      .bindPopup("Lafayette Park")
+      .addTo(map);
+
+    L.marker([38.724412336817714, -90.48493758810969], {
+      icon: L.mapquest.icons.marker(),
+      draggable: false
+    })
+      .bindPopup("Creve Coeur Lake")
+      .addTo(map);
+  }
 }
+
 router.hooks({
   before: (done, params) => {
     const view =
@@ -59,7 +107,7 @@ router.hooks({
           .then(response => {
             const kelvinToFahrenheit = kelvinTemp =>
               Math.round((kelvinTemp - 273.15) * (9 / 5) + 32);
-            store.Home.weather = {
+            store.Trails.weather = {
               city: response.data.name,
               temp: kelvinToFahrenheit(response.data.main.temp),
               feelsLike: kelvinToFahrenheit(response.data.main.feels_like),
