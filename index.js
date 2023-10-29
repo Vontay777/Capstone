@@ -68,6 +68,41 @@ function afterRender(state) {
       .bindPopup("Creve Coeur Lake")
       .addTo(map);
   }
+
+  if (state.view === "Contact") {
+    // Add an event handler for the submit button on the form
+    document.querySelector("form").addEventListener("submit", event => {
+      event.preventDefault();
+
+      // Get the form element
+      const inputList = event.target.elements;
+      console.log("Input Element List", inputList);
+      // Create an empty array to hold the toppings
+
+      // Iterate over the toppings array
+      // Create a request body object to send to the API
+      const requestData = {
+        Name: inputList.Name.value,
+        Phone: inputList.Phone.value,
+        Email: inputList.Email.value
+      };
+      // Log the request body to the console
+      console.log("request Body", requestData);
+
+      axios
+        // Make a POST request to the API to create a new pizza
+        .post(`${process.env.DOG_TRAILS_API}/customer`, requestData)
+        .then(response => {
+          //  Then push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
+          store.Contact.Customer.push(response.data);
+          router.navigate("/Customer");
+        })
+        // If there is an error log it to the console
+        .catch(error => {
+          console.log("It puked", error);
+        });
+    });
+  }
 }
 
 router.hooks({
@@ -113,6 +148,21 @@ router.hooks({
               feelsLike: kelvinToFahrenheit(response.data.main.feels_like),
               description: response.data.weather[0].main
             };
+            done();
+          })
+          .catch(error => {
+            console.log("It puked", error);
+            done();
+          });
+        break;
+      case "Contact":
+        // New Axios get request utilizing already made environment variable
+        axios
+          .get(`${process.env.DOG_TRAILS_API}/customer`)
+          .then(response => {
+            // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
+            console.log("response", response);
+            store.Contact.Customer = response.data;
             done();
           })
           .catch(error => {
