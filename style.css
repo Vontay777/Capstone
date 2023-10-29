@@ -288,7 +288,21 @@ input[type=submit] {
   align-content: center;
   margin: auto;
 }
+.yo{
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex: content;
+  margin-left: 10px;
+}
 
+#yo{
+  height: 500%;
+
+}
+#order1 > #po > p{
+  margin-top: 5px;
+}
 /* form > label {
   display:flex;
   position: absolute;

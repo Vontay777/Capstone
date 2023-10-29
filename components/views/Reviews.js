@@ -2,7 +2,7 @@ import html from "html-literal";
 
 export default state => html`
   <section id="contactReview">
-    <form id="order1" method="POST" action="">
+    <form id="order1" method="POST" action=""   onsubmit="return confirm('Thank you for using the App!!');">
       <h2> Leave a Review </h2>
 
 
