@@ -40,7 +40,7 @@ export default state => html`
           name="Review"
           id="Review"
           placeholder="Leave a Review"
-          size="100"
+          size="80"
           height="400"
           required
           />

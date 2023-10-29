@@ -64,8 +64,6 @@ button:hover {
 }
 
 
-
-
 .card1{
   width: 200px;
   height: 230px;
@@ -147,6 +145,11 @@ input[type="submit"] {
   border-radius: 20px;
   font-size: large;
   color: #fff;
+  transition: transform 0.5s;
+}
+
+input[type="submit"]:hover {
+  transform: translateY(-10px);
 }
 
 h1{
