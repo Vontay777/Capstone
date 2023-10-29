@@ -18,6 +18,7 @@ export default state => html`
           name="Name"
           id="Name"
           placeholder="Enter Your Name"
+          size="50"
           required
         />
       </div>
@@ -28,26 +29,31 @@ export default state => html`
           name="Email"
           id="Email"
           placeholder="Email Address"
+          size="60"
           required
           />
         </div>
-        <label for="Review">Review:</label>
+        <div>
+        <label for="Review"></label>
         <input
           type="text"
           name="Review"
           id="Review"
           placeholder="Leave a Review"
+          size="100"
+          height="400"
           required
           />
         </div>
-        <input type="submit" name="submit" value="Submit" />
+        <div id =sub>
+        <input type="submit" name="submit" value="Submit"  />
+        </div>
 
 
 
-
-      ${state.Customer.map(customer => {
-        return `<tr><td>${customer.phone}</td><td>${customer.email}</td><td>${customer.name}`;
-      }).join("")}
+        ${state.Customer.map(customer => {
+          return `<tr><td>${customer.phone}</td><td>${customer.email}</td><td>${customer.name}`;
+        }).join("")}
     </table>
   </section>
 `;

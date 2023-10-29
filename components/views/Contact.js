@@ -11,6 +11,7 @@ export default state => html`
           name="Name"
           id="Name"
           placeholder="Enter Your Name"
+          size="60"
           required
         />
       </div>
@@ -21,6 +22,7 @@ export default state => html`
           name="Number"
           id="Number"
           placeholder="(###-###-####)"
+          size="60"
           required
         />
       </div>
@@ -31,10 +33,13 @@ export default state => html`
           name="Email"
           id="Email"
           placeholder="Email Address"
+          size="60"
           required
         />
       </div>
-      <input type="submit" name="submit" value="Submit" />
+      <div id="sub">
+        <input type="submit" name="submit" value="Submit" />
+      </div>
     </form>
   </section>
 `;
