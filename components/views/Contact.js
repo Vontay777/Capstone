@@ -34,7 +34,7 @@ export default state => html`
           required
         />
       </div>
-      <input type="submit" name="submit" value="Submit Pizza" />
+      <input type="submit" name="submit" value="Submit" />
     </form>
   </section>
 `;

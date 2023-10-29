@@ -1,7 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import paths from "./routers/paths.js";
+import customer from "./routers/customer.js";
 
 dotenv.config();
 
@@ -88,7 +88,7 @@ app.get("/weather/:city", (request, response) => {
   );
 });
 
-app.use("/paths", paths);
+app.use("/customer", customer);
 
 // not sure ^^^ //
 

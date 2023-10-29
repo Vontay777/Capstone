@@ -1,12 +1,12 @@
 import { Router } from "express";
-import Path from "../models/Path.js";
+import Customer from "../models/Customer.js";
 
 const router = Router();
 
 // Create pizza route
 router.post("/", async (request, response) => {
   try {
-    const newPath = new Path(request.body);
+    const newPath = new Customer(request.body);
 
     const data = await newPath.save();
 
@@ -28,7 +28,7 @@ router.get("/", async (request, response) => {
     // Store the query params into a JavaScript Object
     const query = request.query; // Defaults to an empty object {}
 
-    const data = await Path.find(query);
+    const data = await Customer.find(query);
 
     response.json(data);
   } catch (error) {
@@ -42,7 +42,7 @@ router.get("/", async (request, response) => {
 // Get a single pizza by ID
 router.get("/:id", async (request, response) => {
   try {
-    const data = await Path.findById(request.params.id);
+    const data = await Customer.findById(request.params.id);
 
     response.json(data);
   } catch (error) {
@@ -56,7 +56,7 @@ router.get("/:id", async (request, response) => {
 // Delete a pizza by ID
 router.delete("/:id", async (request, response) => {
   try {
-    const data = await Path.findByIdAndRemove(request.params.id, {});
+    const data = await Customer.findByIdAndRemove(request.params.id, {});
 
     response.json(data);
   } catch (error) {
@@ -72,7 +72,7 @@ router.put("/:id", async (request, response) => {
   try {
     const body = request.body;
 
-    const data = await Path.findByIdAndUpdate(
+    const data = await Customer.findByIdAndUpdate(
       request.params.id,
       {
         $set: {
