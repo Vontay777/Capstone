@@ -35,8 +35,8 @@ function afterRender(state) {
       draggable: false
     })
       .bindPopup(
-        "<img src = https://www.stlouis-mo.gov/government/departments/parks/parks/images/115-13417135525139-large.jpg width=300px />  " +
-          "Tower Grove Parks"
+        "<a href='https://www.towergrovepark.org/'><img src = https://images.squarespace-cdn.com/content/v1/578fe1beff7c5055e845e712/1505946471919-632TX9MFKACTF7YOWLD3/IMG_6456.jpg?format=2500w width=300px />  " +
+          "<b>Tower Grove Park </b></a>"
       )
       .addTo(map);
 
@@ -44,28 +44,42 @@ function afterRender(state) {
       icon: L.mapquest.icons.marker(),
       draggable: false
     })
-      .bindPopup("Forest Park")
+      .bindPopup(
+        "<a href='https://www.forestparkforever.org/visit'><img src = https://images.squarespace-cdn.com/content/v1/5233160ae4b08346f3be204b/1611952053709-S8RGYX6L8O0ZV55TZFK3/DJI_0744+web.jpg?format=1500w height= 200px width=300px />  " +
+          "<b> Forest Park </b></a>"
+      )
       .addTo(map);
 
     L.marker([38.56325080105689, -90.26593619380246], {
       icon: L.mapquest.icons.marker(),
       draggable: false
     })
-      .bindPopup("Carondelet Park")
+      .bindPopup(
+        "<a href='https://www.stlouis-mo.gov/government/departments/parks/parks/browse-parks/view-park.cfm?parkID=5'><img src = https://www.stlouis-mo.gov/government/departments/parks/parks/images/5-22814163423685-large.jpg width=300px />  " +
+          "<b> Carondelet Park </b></a>" +
+          "Mon-Fri 6am-10pm"+
+          "<a href='https://www.google.com/search?q=crondolet+park&rlz=1C1CHBF_enUS1016US1016&oq=crondolet+park&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIPCAEQLhgKGK8BGMcBGIAEMg8IAhAuGAoYrwEYxwEYgAQyDwgDEC4YChivARjHARiABDIJCAQQABgKGIAEMgkIBRAAGAoYgAQyDwgGEC4YChivARjHARiABDIPCAcQLhgKGK8BGMcBGIAEMg8ICBAuGAoYrwEYxwEYgATSAQg1OTEyajBqNKgCALACAA&sourceid=chrome&ie=UTF-8#:~:text=MON,1.5%20hours%20here'<b> Population! </b></a>"
+      )
       .addTo(map);
 
     L.marker([38.61626070515646, -90.21634994214477], {
       icon: L.mapquest.icons.marker(),
       draggable: false
     })
-      .bindPopup("Lafayette Park")
+      .bindPopup(
+        "<a href='https://www.stlouis-mo.gov/parks/parks/browse-parks/view-park.cfm?parkID=52'><img src = https://www.stlouis-mo.gov/government/departments/parks/parks/images/52-891414531675-large.jpg width=300px />  " +
+          "<b> Lafayette Park </b></a>"
+      )
       .addTo(map);
 
     L.marker([38.724412336817714, -90.48493758810969], {
       icon: L.mapquest.icons.marker(),
       draggable: false
     })
-      .bindPopup("Creve Coeur Lake")
+      .bindPopup(
+        "<a href='https://stlouiscountymo.gov/st-louis-county-departments/parks/places/creve-coeur-lake-park/'><img src = https://d1ja9tyo8nbkbc.cloudfront.net/49710257_S0174/S0174/S0174-R0100/MAR23026043/64b0ebc0ac05a9112b1490e0.jpg?version=1689344228&width=640 width=300px />  " +
+          "<b> Creve Coeur Lake </b></a>"
+      )
       .addTo(map);
   }
 

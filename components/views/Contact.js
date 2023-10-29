@@ -1,8 +1,8 @@
 import html from "html-literal";
 
 export default state => html`
-  <section id="contact">
-    <form id="order" method="POST" action="">
+  <section id="contactReview">
+    <form id="order1" method="POST" action="">
       <h2>Contacts</h2>
       <div>
         <label for="Name">Name:</label>

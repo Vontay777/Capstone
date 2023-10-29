@@ -23,8 +23,9 @@ button{
   color: #000;
   font-size: 18px;
   padding: 12px 0;
-  background: #fff;
-  border: 0;
+  background: #736f4e;
+  border:solid 3px;
+  border-color: #fff;
   border-radius: 20px;
   outline: none;
   margin-top: 30px;
@@ -51,21 +52,121 @@ button:hover {
   transition: transform 0.5s;
   text-shadow: 8px 0px 8px #000;
   box-shadow: 8px 0px 8px  #232323;
+  border:solid 3px;
+  border-color: #fff;
 }
 
 .card:hover{
   transform: translateY(-10px);
+}
 
+
+
+
+.card1{
+  width: 200px;
+  height: 230px;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 10px 15px;
+  background-image:url(assets/img/IMG_7615.jpg);
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.5s;
+  text-shadow: 8px 0px 8px #000;
+  box-shadow: 8px 0px 8px  #232323;
+  border:solid 3px;
+  border-color: #fff;
+}
+
+.card1:hover{
+  transform: translateY(-10px);
 
 }
+
+
+.card2{
+  width: 200px;
+  height: 230px;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 10px 15px;
+  background-image:url(assets/img/IMG_7564.jpg);
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.5s;
+  text-shadow: 8px 0px 8px #000;
+  box-shadow: 8px 0px 8px  #232323;
+  border:solid 3px;
+  border-color: #fff;
+}
+
+.card2:hover{
+  transform: translateY(-10px);
+
+}
+
+.card3{
+  width: 200px;
+  height: 230px;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 10px 15px;
+  background-image:url(assets/img/SNAP_20230903-130035.jpg);
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.5s;
+  text-shadow: 8px 0px 8px #000;
+  box-shadow: 8px 0px 8px  #232323;
+  border:solid 3px;
+  border-color: #fff;
+}
+
+.card3:hover{
+  transform: translateY(-10px);
+
+}
+
+h1{
+}
+
 h2{
   font-size: 40px;
   color: #fff;
-  margin-left: 10%;
   text-shadow: 8px 0px 8px #000;
+  text-align: center;
   }
 
+  h3{
+    font-size: 40px;
+    margin-left: 10%;
+    color: #fff;
+    text-shadow: 8px 0px 8px #000;
+    }
 
+    h4{
+      font-size: 25px;
+      color: #9cd08f;
+      text-shadow: 8px 0px 8px #000;
+      text-align: center;
+      margin-bottom: 5px;
+      margin-top: 10px;
+
+  text-shadow:
+    2px 2px 1px #000,
+    -2px 2px 1px #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000;
+      }
 
 html{
 
@@ -92,7 +193,7 @@ html{
 
 }
 
-  #Customer {
+  /* #Customer {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2em;
     height: auto;
@@ -110,8 +211,8 @@ html{
   }
 
   #Customer td,th {
-    width: 25%;
-  }
+    width: 55%;
+  } */
 
 #jumbotron > h3 {
   color: black;
@@ -148,11 +249,7 @@ footer {
   margin: 1rem 1rem;
 }
 
-#bio {
-  margin: 1rem;
-}
-
-#contact {
+#contactReview {
 height: 800px;
 width: 80%;
 align-self: center;
@@ -161,15 +258,17 @@ text-align: center;
 margin-top: 2%;
 }
 
-
-#order {
-background-color:#736f4e ;
-width: 100%;
-height: 100%;
-margin: auto;
-text-align: center;
-font-size: larger;
-}
+#order1 {
+  background-color:#736f4e ;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+  font-size: larger;
+  border: 5px solid;
+  border-color: #9cd08f ;
+  border-radius: 15px;
+  }
 
 input[type=submit] {
   align-self: center;
@@ -178,7 +277,14 @@ input[type=submit] {
   margin: auto;
 
 }
-
+nav > ul > li > a{
+  font-size: 20px;
+  font-weight: 400;
+  color: #000;
+}
+a{
+  color: #fff;
+}
 @media (max-width: 549px){
   .hidden--mobile {
     display: none !important;
@@ -188,11 +294,13 @@ input[type=submit] {
     display: flex;
     align-items: center;
     flex-direction: column;
+    font-size: large;
   }
 
   nav > i {
     padding: 1rem;
-    font-size: 2em;
+    font-size: 3em;
+    font-size: large;
   }
 
   nav > ul {
@@ -200,11 +308,13 @@ input[type=submit] {
     align-items: center;
     flex-direction: column;
     padding: 0 0;
+    font-size: large;
   }
 
   nav > ul > li {
     padding: 0.5rem;
     list-style-type: none;
+    font-size: large;
   }
 
   #bio img {
@@ -226,10 +336,11 @@ input[type=submit] {
     display: flex;
     flex-direction: column;
     text-decoration: none;
-    border: 1px solid;
+    border: 4px solid;
+    border-color: #9cd08f ;
     padding: 0.5rem 0.5rem;
     border-radius: 20px;
-    background-color: white;
+    background-color: #fff;
     transition: transform 0.5s;
   }
   nav > ul > li:hover {
@@ -256,4 +367,7 @@ input[type=submit] {
   height: 700px;
   width: 80%;
   margin: auto auto;
+  border: 25px solid;
+  border-color: #9cd08f ;
+  border-radius: 20px;
 }
