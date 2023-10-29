@@ -36,7 +36,9 @@ function afterRender(state) {
     })
       .bindPopup(
         "<a href='https://www.towergrovepark.org/'><img src = https://images.squarespace-cdn.com/content/v1/578fe1beff7c5055e845e712/1505946471919-632TX9MFKACTF7YOWLD3/IMG_6456.jpg?format=2500w width=300px />  " +
-          "<b>Tower Grove Park </b></a>"
+          "<b>Tower Grove Park </b></a>" +
+          "Sun-Sat 6am-10pm" +
+          "<a href='https://www.google.com/search?q=forest+park+stl&rlz=1C1CHBF_enUS1016US1016&oq=forest+Park&gs_lcrp=EgZjaHJvbWUqCwgAEEUYJxg7GIoFMgsIABBFGCcYOxiKBTIMCAEQRRg7GLEDGIAEMgYIAhBFGEAyDQgDEC4YrwEYxwEYgAQyDQgEEC4YrwEYxwEYgAQyBggFEEUYPDIGCAYQRRg8MgYIBxBFGDzSAQg2ODgxajBqOagCALACAA&sourceid=chrome&ie=UTF-8#:~:text=MON,3.5%20hours%20here'<b> Population! </b></a>"
       )
       .addTo(map);
 
@@ -46,7 +48,9 @@ function afterRender(state) {
     })
       .bindPopup(
         "<a href='https://www.forestparkforever.org/visit'><img src = https://images.squarespace-cdn.com/content/v1/5233160ae4b08346f3be204b/1611952053709-S8RGYX6L8O0ZV55TZFK3/DJI_0744+web.jpg?format=1500w height= 200px width=300px />  " +
-          "<b> Forest Park </b></a>"
+          "<b> Forest Park </b></a>" +
+          "Sun-Sat 6am-10pm" +
+          "<a href='https://www.google.com/search?q=forest+park+stl&rlz=1C1CHBF_enUS1016US1016&oq=forest+Park&gs_lcrp=EgZjaHJvbWUqCwgAEEUYJxg7GIoFMgsIABBFGCcYOxiKBTIMCAEQRRg7GLEDGIAEMgYIAhBFGEAyDQgDEC4YrwEYxwEYgAQyDQgEEC4YrwEYxwEYgAQyBggFEEUYPDIGCAYQRRg8MgYIBxBFGDzSAQg2ODgxajBqOagCALACAA&sourceid=chrome&ie=UTF-8#:~:text=MON,3.5%20hours%20here'<b> Population! </b></a>"
       )
       .addTo(map);
 
@@ -57,7 +61,7 @@ function afterRender(state) {
       .bindPopup(
         "<a href='https://www.stlouis-mo.gov/government/departments/parks/parks/browse-parks/view-park.cfm?parkID=5'><img src = https://www.stlouis-mo.gov/government/departments/parks/parks/images/5-22814163423685-large.jpg width=300px />  " +
           "<b> Carondelet Park </b></a>" +
-          "Mon-Fri 6am-10pm"+
+          "Sun-Sat 6am-10pm" +
           "<a href='https://www.google.com/search?q=crondolet+park&rlz=1C1CHBF_enUS1016US1016&oq=crondolet+park&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIPCAEQLhgKGK8BGMcBGIAEMg8IAhAuGAoYrwEYxwEYgAQyDwgDEC4YChivARjHARiABDIJCAQQABgKGIAEMgkIBRAAGAoYgAQyDwgGEC4YChivARjHARiABDIPCAcQLhgKGK8BGMcBGIAEMg8ICBAuGAoYrwEYxwEYgATSAQg1OTEyajBqNKgCALACAA&sourceid=chrome&ie=UTF-8#:~:text=MON,1.5%20hours%20here'<b> Population! </b></a>"
       )
       .addTo(map);
@@ -68,7 +72,9 @@ function afterRender(state) {
     })
       .bindPopup(
         "<a href='https://www.stlouis-mo.gov/parks/parks/browse-parks/view-park.cfm?parkID=52'><img src = https://www.stlouis-mo.gov/government/departments/parks/parks/images/52-891414531675-large.jpg width=300px />  " +
-          "<b> Lafayette Park </b></a>"
+          "<b> Lafayette Park </b></a>" +
+          "Sun-Sat 6am-10pm" +
+          "<a href='https://www.google.com/search?q=lafayette+park&sca_esv=577644912&rlz=1C1CHBF_enUS1016US1016&sxsrf=AM9HkKlBj9YrATLXSexXdFiNLvLS6r0jXQ%3A1698604227692&ei=w6Q-ZZ7VKe2s0PEP3_aooAI&gs_ssp=eJzj4tFP1zeszLUwKkqqNDJgtFI1qLAwT7FIMja3TDNNTTQxtkixMqhItkwxNU5OSzEwTUpMSbNM9eLLSUxLrEwtKUlVKEgsygYAwTgVdA&oq=lafe&gs_lp=Egxnd3Mtd2l6LXNlcnAiBGxhZmUqAggBMg0QLhiDARixAxiABBgKMg0QLhivARjHARiABBgKMgoQLhixAxiABBgKMgUQLhiABDILEC4YgAQYxwEYrwEyFBAuGK8BGMcBGLEDGIoFGJgFGJkFMhAQLhiABBixAxjHARivARgKMgUQABiABDILEC4YgAQYxwEYrwEyBRAAGIAEMhwQLhivARjHARiABBgKGJcFGNwEGN4EGOAE2AEDSMQiUO0MWPgWcAR4AZABAJgBywGgAe4EqgEFMC4zLjG4AQPIAQD4AQGoAhTCAgoQABhHGNYEGLADwgIKEAAYigUYsAMYQ8ICBxAjGOoCGCfCAgcQLhjqAhgnwgIQEAAYigUY6gIYtAIYQ9gBAcICEBAuGIoFGOoCGLQCGEPYAQHCAhYQABgDGI8BGOUCGOoCGLQCGIwD2AECwgINEC4YigUYxwEYrwEYJ8ICDRAuGMcBGNEDGIoFGCfCAgQQIxgnwgIHEAAYigUYQ8ICCBAAGIoFGJECwgIOEC4YigUYxwEYrwEYkQLCAgsQLhiABBjHARjRA8ICERAuGIAEGLEDGIMBGMcBGNEDwgILEC4YigUYsQMYgwHCAhoQLhiKBRjHARivARiXBRjcBBjeBBjgBNgBA8ICBxAjGIoFGCfCAgcQLhiKBRhDwgINEC4YigUYxwEYrwEYQ8ICDRAuGK8BGMcBGIoFGCfCAggQLhiKBRiRAsICCBAuGLEDGIAEwgIUEC4YigUYsQMYxwEYrwEYmAUYmQXCAg4QLhiABBixAxjHARivAcICCxAuGIMBGLEDGIAEwgIKEC4YigUYsQMYQ8ICGhAuGK8BGMcBGIoFGJcFGNwEGN4EGOAE2AEDwgIcEC4YgwEYsQMYgAQYChiXBRjcBBjeBBjgBNgBA-IDBBgAIEGIBgGQBgq6BgYIARABGAG6BgYIAhABGAu6BgYIAxABGBQ&sclient=gws-wiz-serp#:~:text=Popular%20times,1.5%20hours%20here'<b> Population! </b></a>"
       )
       .addTo(map);
 
@@ -78,7 +84,9 @@ function afterRender(state) {
     })
       .bindPopup(
         "<a href='https://stlouiscountymo.gov/st-louis-county-departments/parks/places/creve-coeur-lake-park/'><img src = https://d1ja9tyo8nbkbc.cloudfront.net/49710257_S0174/S0174/S0174-R0100/MAR23026043/64b0ebc0ac05a9112b1490e0.jpg?version=1689344228&width=640 width=300px />  " +
-          "<b> Creve Coeur Lake </b></a>"
+          "<b> Creve Coeur Lake </b></a>" +
+          "Sun-Sat 9am-7pm" +
+          "<a href='https://www.google.com/search?q=Creve+Coeur+Lake+Memorial+Park%0D%0A&sca_esv=577644912&rlz=1C1CHBF_enUS1016US1016&sxsrf=AM9HkKl75FNPYQ5OetZ04vpa6KPPi5S68w%3A1698604090478&ei=OqQ-ZYLmHIbI0PEPwZua2AY&ved=0ahUKEwiC67Sr8ZuCAxUGJDQIHcGNBmsQ4dUDCBA&uact=5&oq=Creve+Coeur+Lake+Memorial+Park%0D%0A&gs_lp=Egxnd3Mtd2l6LXNlcnAiH0NyZXZlIENvZXVyIExha2UgTWVtb3JpYWwgUGFyawoyBxAuGOoCGCcyBxAjGOoCGCcyBxAjGOoCGCcyBxAjGOoCGCcyBxAjGOoCGCcyBxAjGOoCGCcyBxAjGOoCGCcyBxAjGOoCGCcyBxAjGOoCGCcyBxAjGOoCGCcyFhAAGAMYjwEY5QIY6gIYtAIYjAPYAQEyFhAAGAMYjwEY5QIY6gIYtAIYjAPYAQEyFhAuGAMYjwEY5QIY6gIYtAIYjAPYAQEyFhAAGAMYjwEY5QIY6gIYtAIYjAPYAQEyFhAAGAMYjwEY5QIY6gIYtAIYjAPYAQEyFhAAGAMYjwEY5QIY6gIYtAIYjAPYAQEyFhAuGAMYjwEY5QIY6gIYtAIYjAPYAQEyFhAAGAMYjwEY5QIY6gIYtAIYjAPYAQEyFhAAGAMYjwEY5QIY6gIYtAIYjAPYAQEyGBAAGAMYjwEY5QIY6gIYtAIYChiMA9gBAUjzGVCFEliFEnACeAGQAQCYAQCgAQCqAQC4AQPIAQD4AQH4AQKoAhTCAgoQABhHGNYEGLAD4gMEGAAgQYgGAZAGCLoGBggBEAEYCw&sclient=gws-wiz-serp#:~:text=Popular%20times,1%20hour%20here'<b> Population! </b></a>"
       )
       .addTo(map);
   }

@@ -1,6 +1,7 @@
 *{
   margin:0;
   padding:0;
+  font-family:Josefin,Gluten;
 }
 
 
@@ -9,6 +10,8 @@ header{
   text-align: center;
   color: #fff;
   text-shadow: 4px 0px 4px #000;
+}
+header > .logo {
 }
 .row{
   display: flex;
@@ -21,7 +24,7 @@ header{
 button{
   width: 180px;
   color: #000;
-  font-size: 18px;
+  font-size: 16px;
   padding: 12px 0;
   background: #736f4e;
   border:solid 3px;
@@ -59,8 +62,6 @@ button:hover {
 .card:hover{
   transform: translateY(-10px);
 }
-
-
 
 
 .card1{
@@ -136,6 +137,21 @@ button:hover {
 
 }
 
+input[type="submit"] {
+  background-color: #3b3923;
+  width: 200px; /* width of image */
+  height: 50px; /* height of image */
+  border: solid #9cd08f 4px;
+  border-radius: 20px;
+  font-size: large;
+  color: #fff;
+  transition: transform 0.5s;
+}
+
+input[type="submit"]:hover {
+  transform: translateY(-10px);
+}
+
 h1{
 }
 
@@ -169,13 +185,9 @@ h2{
       }
 
 html{
-
-
   background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(assets/img/dog\ trail.jpeg);
   background-position: center;
   background-size: cover;
-
-
 }
 
 #jumbotron {
@@ -188,10 +200,16 @@ html{
   color: #fff;
 }
 
+.logo{
+  border: 50px;
+  width: 200px;
+  height: auto;
+}
+
 
 #root {
-
 }
+
 
   /* #Customer {
     font-family: Arial, Helvetica, sans-serif;
@@ -237,12 +255,6 @@ form > * {
   margin: 0.5rem;
 }
 
-form > input[type="submit"] {
-  width: 40%;
-  margin: 0.5rem;
-  margin-right: auto;
-}
-
 footer {
   border-top: solid 1px black;
   padding: 2rem 2rem 4rem;
@@ -275,12 +287,25 @@ input[type=submit] {
   align-items: center;
   align-content: center;
   margin: auto;
+}
 
+/* form > label {
+  display:flex;
+  position: absolute;
+  left: 20px;
+} */
+
+#sub{
+}
+#Review{
+  height: 200px;
+  font-size: 14pt;
 }
 nav > ul > li > a{
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: 200;
   color: #000;
+  text-decoration: none;
 }
 a{
   color: #fff;
