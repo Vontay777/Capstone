@@ -11,9 +11,13 @@ const customerSchema = new mongoose.Schema({
   },
   email: {
     type: String
+  },
+  review: {
+    type: String
   }
 });
-// },
+
+// ,
 // order: { type: mongoose.Schema.Types.ObjectId, ref: "Order" }
 
 const Customer = mongoose.model("Customer", customerSchema);

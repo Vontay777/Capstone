@@ -48,12 +48,12 @@ export default state => html`
         <div id =sub>
         <input type="submit" name="submit" value="Submit"  />
         </div>
-
-
-
-        ${state.Customer.map(customer => {
-          return `<tr><td>${customer.phone}</td><td>${customer.email}</td><td>${customer.name}`;
-        }).join("")}
+</form>
     </table>
+        ${state.Customer.map(customer => {
+          return html`
+            ${customer.email}, ${customer.customer}, ${customer.review}
+          `;
+        })}
   </section>
 `;
