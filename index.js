@@ -104,9 +104,9 @@ function afterRender(state) {
       // Iterate over the toppings array
       // Create a request body object to send to the API
       const requestData = {
-        Name: inputList.Name.value,
-        Phone: inputList.Phone.value,
-        Email: inputList.Email.value
+        customer: inputList.Name.value,
+        phone: inputList.Number.value,
+        email: inputList.Email.value
       };
       // Log the request body to the console
       console.log("request Body", requestData);
@@ -117,7 +117,42 @@ function afterRender(state) {
         .then(response => {
           //  Then push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
           store.Contact.Customer.push(response.data);
-          router.navigate("/Customer");
+          router.navigate("/Contact");
+        })
+        // If there is an error log it to the console
+        .catch(error => {
+          console.log("It puked", error);
+        });
+    });
+  }
+  if (state.view === "Reviews") {
+    // Add an event handler for the submit button on the form
+    document.querySelector("form").addEventListener("submit", event => {
+      console.log("hello");
+      event.preventDefault();
+
+      // Get the form element
+      const inputList = event.target.elements;
+      console.log("Input Element List", inputList);
+      // Create an empty array to hold the toppings
+
+      // Iterate over the toppings array
+      // Create a request body object to send to the API
+      const requestData = {
+        customer: inputList.Name.value,
+        email: inputList.Email.value,
+        review: inputList.Review.value
+      };
+      // Log the request body to the console
+      console.log("request Body", requestData);
+
+      axios
+        // Make a POST request to the API to create a new pizza
+        .post(`${process.env.DOG_TRAILS_API}/customer`, requestData)
+        .then(response => {
+          //  Then push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
+          store.Reviews.Customer.push(response.data);
+          router.navigate("/Reviews");
         })
         // If there is an error log it to the console
         .catch(error => {
@@ -185,6 +220,22 @@ router.hooks({
             // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
             console.log("response", response);
             store.Contact.Customer = response.data;
+            done();
+          })
+          .catch(error => {
+            console.log("It puked", error);
+            done();
+          });
+        break;
+
+      case "Reviews":
+        // New Axios get request utilizing already made environment variable
+        axios
+          .get(`${process.env.DOG_TRAILS_API}/customer`)
+          .then(response => {
+            // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
+            console.log("response", response);
+            store.Reviews.Customer = response.data;
             done();
           })
           .catch(error => {
